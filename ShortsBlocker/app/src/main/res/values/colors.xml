@@ -1,0 +1,6 @@
+<resources>
+    <color name="brand_red">#FF0033</color>
+    <color name="bg_dark">#121212</color>
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_muted">#AAAAAA</color>
+</resources>
