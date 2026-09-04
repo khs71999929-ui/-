@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Shorts Blocker</string>
+    <string name="accessibility_service_description">유튜브 쇼츠 화면을 감지해서 자동으로 뒤로가기 시켜 차단합니다.</string>
+</resources>

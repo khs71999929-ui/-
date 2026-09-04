@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="관리자 설정"
+            android:textColor="@color/text_light"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="PIN을 아는 사람만 여기 들어올 수 있어요"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp" />
+
+        <!-- 문구 관리 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자각형 문구 목록"
+            android:textColor="@color/brand_red"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="예: 이 시간에 공부했으면 이미 끝났어"
+                android:textColor="@color/text_light"
+                android:textColorHint="@color/text_muted" />
+
+            <Button
+                android:id="@+id/addMessageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추가" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/messageListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 목표 사진 관리 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="목표 사진 (예: 목표 대학교 사진)"
+            android:textColor="@color/brand_red"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/addPhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="사진 추가" />
+
+        <LinearLayout
+            android:id="@+id/photoListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 문구 등장 주기 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="몇 번 차단마다 문구를 보여줄까요?"
+            android:textColor="@color/brand_red"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/thresholdInput"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_light" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="브라우저에서 차단할 사이트/키워드"
+            android:textColor="@color/brand_red"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="주소창 텍스트에 이 문자열이 포함되면 차단해요. 예: youtube.com/shorts, instagram.com/reels, tiktok.com"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/domainInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="예: instagram.com/reels"
+                android:textColor="@color/text_light"
+                android:textColorHint="@color/text_muted" />
+
+            <Button
+                android:id="@+id/addDomainButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추가" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/domainListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/saveAllButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/brand_red"
+            android:text="전체 저장" />
+
+    </LinearLayout>
+</ScrollView>

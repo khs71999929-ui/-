@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="🔒 엄격 모드"
+        android:textColor="@color/text_light"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- 시작 전 화면 -->
+    <LinearLayout
+        android:id="@+id/startSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="켜면 설정한 시간 동안은 스위치를 꺼도 계속 차단돼요. 최대 24시간까지 설정할 수 있어요."
+            android:textColor="@color/text_muted"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/hoursLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="12시간"
+            android:textColor="@color/text_light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/hoursSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="24"
+            android:progress="12" />
+
+        <Button
+            android:id="@+id/startStrictButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/brand_red"
+            android:text="엄격 모드 시작" />
+
+    </LinearLayout>
+
+    <!-- 활성화된 동안 보이는 화면 -->
+    <LinearLayout
+        android:id="@+id/activeSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="엄격 모드 진행 중"
+            android:textColor="@color/text_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/remainingTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="00:00:00"
+            android:textColor="@color/brand_red"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/tryUnlockButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="조기 종료 시도" />
+
+        <!-- 설문 통과 후 대기 타이머 -->
+        <LinearLayout
+            android:id="@+id/waitSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="충동을 가라앉히는 시간이에요"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/waitCountdownText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="60"
+                android:textColor="@color/text_light"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/finalUnlockButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:enabled="false"
+                android:text="지금 해제하기" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
